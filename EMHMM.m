@@ -175,7 +175,6 @@ end
 %	$\xi_t(i,j) := \frac{\alpha_t(i)a_{i,j}b_j(o_{t+1})\beta_{t+1}(j)}
 %					{\sum_{i=1}^{N} \sum_{j=1}^{N} \alpha_t(i)a_{i,j}b_j(o_{t+1})\beta_{t+1}(j)} $\\
 function xi=CalcXi(T, N, A, B, O, alpha, beta)
-%	xi = zeros(T, N, N);
 	xi = repmat(0, [T N N]);
 	
 	for(t=1:T-1)
