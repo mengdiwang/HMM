@@ -1,0 +1,18 @@
+$\delta_t(j) = \max\limits_{1\leq i\leq N} [\delta_{t-1}(i)a_{ij}]b_j(o_t)$\\
+$\psi_t(j) = \arg \max\limits_{1\leq i\leq N} [\delta_{t-1}(i)a_{ij}]$\\
+$1\leq t \leq T-1, 0 \leq j \leq N-1$\\
+$P^\ast = \max\limits_{1\leq i \leq N} [\delta_T(i)]$\\
+$q^\ast_T = \arg \max\limits_{1\leq i\leq N} [\delta_T(i)]$\\
+$q^\ast_t = \psi_{t+1}(q^\ast_{t+1})$ \\
+$\xi$\\
+$\gamma_t(i) := \frac{\alpha_t(i)\beta_t(i)}{\sum_{j=1}^{N} \alpha_t(j)\beta_t(j)} $\\
+$\xi_t(i,j) := \frac{\alpha_t(i)a_{i,j}b_j(o_{t+1})\beta_{t+1}(j)}
+                {\sum_{i=1}^{N} \sum_{j=1}^{N} \alpha_t(i)a_{i,j}b_j(o_{t+1})\beta_{t+1}(j)} $\\$\beta := \sum_{j=1}^{N} a_{i,j}b_j(o_{t+1})\beta_{t+1}(j), 1 \leq i \leq N, t = T-1,...,1 $\\
+$\alpha_1(i) = \pi_ib_i(o_1)$\\
+$\alpha_{t+1}(j) := [\sum_{i=1}^{N} \alpha_t(i)a_{i,j}]b_j(o_{t+1}) $\\
+$\hat{a}_{i,j} = \frac{\sum \xi_t(i,j)}{\sum \gamma_t(i)}$\\
+$\hat{b}_j(k) = \frac{\sum_{t,o_t=k} \gamma_t(j)}{\sum_t \gamma(j)}$\\
+$\hat{\alpha}_t(i) = \frac{\alpha_t(i)}{\sum_{i=1}^{N}\alpha_t(i)}$\\
+$\hat{\beta} = c_t\beta_t(i)$\\
+$c_t = \frac{1}{\sum_{i=1}^{N}\alpha_t(i)}$\\
+$log[P(O|\lambda)]= - \sum_{t=1}^{T}\log c_t$\\

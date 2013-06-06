@@ -1,7 +1,7 @@
 %Created by Mengdi Wang on 13-6-5.
 %Copyright (c) 2013年 Mengdi Wang. All rights reserved.
 
-%================Estimate Maximization function for HMM================
+%================Expectation Maximization function for HMM================
 %Parameters:
 %	pi: initial state distribution
 %	A: state-transition probability matrix
@@ -38,6 +38,7 @@ function [A,B,pi]=EMHMM(pi, A, B, O)
 		xi = CalcXi(T, N, A, B, O, alpha, beta);
 		
 		%Reestimate \pi
+		% $\hat{\pi_i}=\gamma_1(i)$
 		for(i=1:N) 
 			pi(i) = gamma(1,i);
 		end
