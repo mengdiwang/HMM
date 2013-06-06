@@ -33,9 +33,9 @@ function [A,B,pi]=EMHMM(pi, A, B, O)
 	while(1)
 		
 		[alpha, prob, scaleM] = Forward(T, N, pi, A, B, O, 1);
-		[beta, pprob]		  = Backward(T, N, A, B, O, 1, scaleM);
-		gamma				  = CalcGamma(T, N, alpha, beta);
-		xi					  = CalcXi(T, N, A, B, O, alpha, beta);
+		[beta, pprob] = Backward(T, N, A, B, O, 1, scaleM);
+		gamma = CalcGamma(T, N, alpha, beta);
+		xi = CalcXi(T, N, A, B, O, alpha, beta);
 		
 		%Reestimate \pi
 		for(i=1:N) 
